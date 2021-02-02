@@ -1,0 +1,130 @@
+# OSX
+#
+.DS_Store
+
+# Xcode
+#
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+test-reports/
+
+# Android/IntelliJ
+#
+build/
+.idea
+.gradle
+local.properties
+*.iml
+
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log
+.npmrc
+
+# BUCK
+buck-out/
+\.buckd/
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
+
+*/fastlane/report.xml
+*/fastlane/Preview.html
+*/fastlane/screenshots
+
+# Bundle artifact
+*.jsbundle
+
+# Misc
+#
+.env
+
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+## Build generated
+build/
+DerivedData
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+## Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+#
+Pods/
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+Carthage/Build
+# OS X specific
+*.DS_Store
+
+Collapse 
+android/captures
+ios/Index/DataStore
+yarn.lock
+
+Scripts/npmScripts/AirshipConfigs
+Scripts/npmScripts/AppCenerConfig
+
+# Generated Files
+VFGMVA10/ios/AirshipConfigs
+VFGMVA10/ios/AppCenterConfigs
+
+# Modified Files by script
+VFGMVA10/ios/AirshipConfig.plist
+VFGMVA10/android/app/google-services.json
+VFGMVA10/android/app/src/acc/assets/airshipconfig.properties
+VFGMVA10/android/app/src/acc/assets/appcenter-config.json
+VFGMVA10/android/app/src/debug/assets/airshipconfig.properties
+VFGMVA10/android/app/src/debug/assets/appcenter-config.json
+VFGMVA10/android/app/src/stage/assets/airshipconfig.properties
+VFGMVA10/android/app/src/stage/assets/appcenter-config.json
+VFGMVA10/android/app/src/release/assets/airshipconfig.properties
+VFGMVA10/android/app/src/release/assets/appcenter-config.json
+artifacts/
+
+# Coverage
+coverage
+
+# Reports
+test-report.xml
