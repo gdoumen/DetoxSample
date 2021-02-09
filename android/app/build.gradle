@@ -79,8 +79,17 @@ import com.android.build.OutputFile
 
 project.ext.react = [
     enableHermes: false,  // clean and rebuild if changing
-]
 
+    //bundle JS and assets in non release modes
+    bundleInDebug: true,
+    bundleInAcc: true,
+    bundleInStage: true,
+
+    // disable dev mode for test and stage builds
+    // this allow the NODE_ENV to be set to "production" which disabled propTypes validation and turns on JS minification among other things
+    devDisabledInStage: true,
+    devDisabledInAcc: true,
+] 
 apply from: "../../node_modules/react-native/react.gradle"
 
 /**
