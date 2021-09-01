@@ -2,37 +2,36 @@
   "testRunner": "jest",
   "runnerConfig": "e2e/config.json",
   "configurations": {
-    "android.mock": {
-      "build":
-        "SET RN_SRC_EXT=e2e.js && cd android && ./gradlew clean assembleDebug assembleAndroidTest -DtestBuildType=debug && cd ..",
-      "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
-      "type": "android.attached",
-      "device": {
-        "adbName": "RF8M9288G4J"
-      }
-    },
-    "android.mock.emulator": {
-      "type": "android.emulator",
-      "build":
-        "SET RN_SRC_EXT=e2e.js && cd android && ./gradlew clean assembleDebug assembleAndroidTest -DtestBuildType=debug && cd ..",
-      "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
-      "device": {
-        "avdName": "Pixel_XL_API_30"
-      }
-    },
+
     "android": {
       "type": "android.attached",
       "build":
         "SET RN_SRC_EXT= &&  cd android && ./gradlew clean assembleDebug assembleAndroidTest -DtestBuildType=debug && cd ..",
-      "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
+      "--binaryPath": "/tmp/app-debug.apk",
+      "binaryPath": "./android/app/build/outputs/apk/debug/app-debug.apk",
       "device": {
         "adbName": "RF8M9288G4J"
       },
 
-      "--session": {
-        "server": "ws://guido.doumen-laumen.de:30800",
-        "sessionId": "DetoxSample"
+      "session": {
+        "server": "ws://detox.dev.centralqa.de:8099"
+      }
+    },
+
+
+    "vfcloud": {
+      "type": "./detox/VFCloudDriver",
+      "device": {
+        "adbName": "ce04171495d59d10037e"
+      },
+      "build":
+        "SET RN_SRC_EXT= &&  cd android && gradlew clean assembleDebug assembleAndroidTest -DtestBuildType=debug && cd ..",
+      "binaryPath": "./android/app/build/outputs/apk/debug/app-debug.apk",
+
+      "session": {
+        "server": "ws://detox.dev.centralqa.de:8099"
       }
     }
+
   }
 }
